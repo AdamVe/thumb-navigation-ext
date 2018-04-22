@@ -2,5 +2,6 @@
 package-lock.json
 node_modules
 *.xpi
+npm-debug.log
 
 src/web-ext-artifacts/*

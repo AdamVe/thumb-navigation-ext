@@ -1,32 +1,33 @@
-html, body {
-    width: 100px;
+html,
+body {
+  width: 100px;
 }
 
 .hidden {
-    display: none;
+  display: none;
 }
 
 .button {
-    margin: 3% auto;
-    padding: 4px;
-    text-align: center;
-    font-size: 1em;
-    font-family: sans-serif;
-    cursor: pointer;
+  cursor: pointer;
+  font-family: sans-serif;
+  font-size: 1em;
+  margin: 3% auto;
+  padding: 4px;
+  text-align: center;
 }
 
 .show:hover {
-    background-color: #CCCCCC;
+  background-color: #ccc;
 }
 
 .show {
-    background-color: #999999;
+  background-color: #999;
 }
 
 .hide {
-    background-color: #CCCCCC;
+  background-color: #ccc;
 }
 
 .hide:hover {
-    background-color: #999999;
+  background-color: #999;
 }
