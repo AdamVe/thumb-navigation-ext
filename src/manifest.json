@@ -8,6 +8,13 @@
         "48": "icons/thumbnav-48.png"
     },
 
+    "applications": {
+        "gecko": {
+            "id": "@thumb-navigation-ext",
+            "strict_min_version": "57.0"
+        }
+    },
+
     "permissions": [
         "activeTab"
     ],

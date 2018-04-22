@@ -1,0 +1,49 @@
+{
+  "name": "thumb-navigation-ext",
+  "title": "Thumb navigation extension",
+  "description": "Adds overlay icons for easier navigation",
+  "version": "1.0.0",
+  "author": "Adam Velebil",
+  "bugs": {
+    "url": "https://github.com/AdamVe/thumb-navigation-ext/issues"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "addons-linter": "^0.15.14",
+    "chai": "^4.1.2",
+    "deploy-txp": "^1.0.7",
+    "eslint": "^3.17.1",
+    "eslint-plugin-no-unsanitized": "^2.0.0",
+    "eslint-plugin-promise": "^3.4.0",
+    "htmllint-cli": "^0.0.5",
+    "jsdom": "^11.6.2",
+    "json": "^9.0.6",
+    "mocha": "^5.0.0",
+    "npm-run-all": "^4.0.0",
+    "sinon": "^4.4.0",
+    "sinon-chai": "^2.14.0",
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-order": "^0.3.0",
+    "web-ext": "^2.2.2"
+  },
+  "homepage": "https://github.com/AdamVe/thumb-navigation-ext#readme",
+  "license": "MPL-2.0",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AdamVe/thumb-navigation-ext.git"
+  },
+  "scripts": {
+    "build": "cd src && web-ext build --overwrite-dest",
+    "deploy": "deploy-txp",
+    "lint": "npm-run-all lint:*",
+    "lint:addon": "addons-linter src --self-hosted",
+    "lint:css": "stylelint src/popup/*.css",
+    "lint:html": "htmllint src/popup/*.html",
+    "lint:js": "eslint .",
+    "package": "rm -rf src/web-ext-artifacts && npm run build && mv src/web-ext-artifacts/thumb_navigation-*.zip addon.xpi",
+    "test": "npm run lint && mocha ./test/setup.js test/**/*.test.js",
+    "test-watch": "mocha ./test/setup.js test/**/*.test.js --watch"
+  }
+}
