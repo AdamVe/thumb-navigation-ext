@@ -18,10 +18,10 @@
     thumbNavigation.style.padding = "0px";
     thumbNavigation.style.position = "fixed";
     thumbNavigation.style.height = "auto";
-    thumbNavigation.style.top = "2em";
-    thumbNavigation.style.right = "2em";
+    thumbNavigation.style.top = "50%";
+    thumbNavigation.style.right = "1em";
     thumbNavigation.style.background = "#fff0";
-    thumbNavigation.style.opacity = "0.6";
+    thumbNavigation.style.opacity = "0.95";
     thumbNavigation.style.zIndex = "100000";
     thumbNavigation.className = "thumb-navigation";
     thumbNavigation.style.cursor = "pointer";
