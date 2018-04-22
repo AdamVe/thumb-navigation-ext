@@ -20,7 +20,8 @@
     thumbNavigation.style.height = "auto";
     thumbNavigation.style.top = "2em";
     thumbNavigation.style.right = "2em";
-    thumbNavigation.style.background = "#ff0000";
+    thumbNavigation.style.background = "#fff0";
+    thumbNavigation.style.opacity = "0.6";
     thumbNavigation.style.zIndex = "100000";
     thumbNavigation.className = "thumb-navigation";
     thumbNavigation.style.cursor = "pointer";
