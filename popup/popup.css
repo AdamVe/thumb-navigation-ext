@@ -1,0 +1,32 @@
+html, body {
+    width: 100px;
+}
+
+.hidden {
+    display: none;
+}
+
+.button {
+    margin: 3% auto;
+    padding: 4px;
+    text-align: center;
+    font-size: 1em;
+    font-family: sans-serif;
+    cursor: pointer;
+}
+
+.show:hover {
+    background-color: #CCCCCC;
+}
+
+.show {
+    background-color: #999999;
+}
+
+.hide {
+    background-color: #CCCCCC;
+}
+
+.hide:hover {
+    background-color: #999999;
+}
