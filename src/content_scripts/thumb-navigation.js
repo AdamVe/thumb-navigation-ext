@@ -48,5 +48,24 @@
     }
   });
 
-  showThumbNavigation();
+  function onOptionsRead(options) {
+    if (options.enabled) {
+      showThumbNavigation();
+    } else {
+      hideThumbNavigation();
+    }
+  }
+
+  function onError() {
+    showThumbNavigation();
+  }
+
+  const defaultOptions = {
+    enabled: true
+  };
+
+  const getting = browser.storage.local.get(defaultOptions);
+  getting
+    .then(onOptionsRead, onError)
+    .catch(onError);
 })();
