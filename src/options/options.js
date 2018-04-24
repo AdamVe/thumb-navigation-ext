@@ -1,6 +1,8 @@
 // -*- js-indent-level: 2; -*-
 
 (function() {
+
+  const extensionEnabledSelector = "#extension-enabled";
   const defaultOptions = {
     enabled: true
   };
@@ -10,7 +12,7 @@
     const thumbNavOptions = defaultOptions;
 
     thumbNavOptions.enabled =
-      document.querySelector("#extension_enabled").checked;
+      document.querySelector(extensionEnabledSelector).checked;
 
     browser.storage.local.set(thumbNavOptions);
   }
@@ -19,7 +21,7 @@
 
     function updateUI(options) {
       document
-        .querySelector("#extension_enabled")
+        .querySelector(extensionEnabledSelector)
         .checked = options.enabled;
     }
 
@@ -38,7 +40,7 @@
   }
 
   document.addEventListener("DOMContentLoaded", restoreOptions);
-  document.querySelector("#extension_enabled")
+  document.querySelector(extensionEnabledSelector)
     .addEventListener("change", saveOptions);
 
 })();
